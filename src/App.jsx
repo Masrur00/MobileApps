@@ -1,15 +1,21 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import './App.css';
+import { Mobile } from './components/Mobile';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const res = [
+    {
+      title: 'Mobile Operating System',
+      items: ['Android', 'Blackberry', 'iPhone', 'Windows Phone'],
+    },
+    {
+      title: 'Mobile Manufacturer',
+      items: ['Samsung', 'HTC', 'Micromax', 'Apple'],
+    },
+  ];
 
-  return (
-    <div className="App">
-     
-    </div>
-  )
+  return <div className="App">    
+  <Mobile />
+  </div>;
 }
 
-export default App
+export default App;
