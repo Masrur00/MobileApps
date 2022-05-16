@@ -9,19 +9,18 @@ export const Mobile = () => {
       items: ['Samsung', 'HTC', 'Micromax', 'Apple'],
     },
   ];
-  return <>
-    {
-      res.map((e)=> (
+  return (
+    <>
+      {res.map((e) => (
         <>
-        <h2>{e.title}</h2>
-        <ul>
-          {
-            e.items.map((item)=> 
-            <li>{item}</li>)
-          }
-        </ul>
-        </>        
-      ))
-    }
-  </>;
+          <h2 key={e} className="head2">{e.title}</h2>
+          <ul>
+            {e.items.map((item) => (
+              <li className="list-child" key={item}>{item}</li>
+            ))}
+          </ul>
+        </>
+      ))}
+    </>
+  );
 };
